@@ -27,10 +27,10 @@ def convert_input_text_to_json(input_file, output_file):
     print(f"Converted {len(data)} entries to {output_file}")
     return data
 
-def get_4_8_6_data():
-    with open(file_4_8_6_json, "r") as f:
+def get_4_8_6_data(file):
+    with open(file, "r") as f:
         return json.load(f)
 
 if __name__ == "__main__":
     data_4_3_8 = convert_input_text_to_json(file_4_3_8_txt, file_4_3_8_json)
-    data_4_8_6 = get_4_8_6_data()
+    data_4_8_6 = get_4_8_6_data(file_4_8_6_json)
