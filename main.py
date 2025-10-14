@@ -1,7 +1,7 @@
 import json
 import re
 
-# Input and output file paths
+# file paths
 file_4_3_8_txt = "input/items-4-3-8.txt"
 file_4_3_8_json = "output/items-4-3-8.json"
 
