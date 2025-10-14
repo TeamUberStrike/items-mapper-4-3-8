@@ -35,17 +35,11 @@ def get_4_8_6_data(file):
     
 def map_item_ids(data_4_3_8, data_4_8_6):
     mapped_item_ids = {}
-    # iterate over 4.3.8 item ids and find matches in 4.8.6 called ID
-    # go in lists of 4.8.6 and find ID there
-    # Ensure both data sources are dictionaries mapping IDs to names
-    # For each key, value in data_4_8_6, handle if value is a list or single item
+
     items_list_4_8_6 = []
     for key, value in data_4_8_6.items():
         if isinstance(value, list):
             items_list_4_8_6.extend(value)
-
-    # for item in items_list_4_8_6:
-    #     print(item["ID"])
 
     for item_id_4_3_8, item_name_4_3_8 in data_4_3_8.items():
         for item_4_8_6 in items_list_4_8_6:
