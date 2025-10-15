@@ -81,4 +81,3 @@ if __name__ == "__main__":
     mapped_item_ids, missed_item_ids = map_item_ids(data_4_3_8, data_4_8_6)
     manual_mapped_item_ids = get_manual_mapped_item_ids(manual_item_mappings_json)
     add_automatically_with_manual_mapped_item_ids(mapped_item_ids, manual_mapped_item_ids)
-
