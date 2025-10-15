@@ -5,8 +5,10 @@ import re
 file_4_3_8_txt = "input/items-4-3-8.txt"
 file_4_3_8_json = "output/items-4-3-8.json"
 file_4_8_6_json = "input/items-4-8-6.json"
+manual_item_mappings_json = "input/manual-item-mappings.json"
 mapped_item_ids_json = "output/mapped-item-ids.json"
 missed_item_ids_json = "output/missed-item-ids.json"
+total_mapped_item_ids_json = "output/total-mapped-item-ids.json"
 
 def convert_input_text_to_json(input_file, output_file):
     data = {}
@@ -48,7 +50,7 @@ def map_item_ids(data_4_3_8, data_4_8_6):
 
     with open(mapped_item_ids_json, "w") as f:
         json.dump(mapped_item_ids, f, indent=4)
-    print(f"Mapped {len(mapped_item_ids)} item ids from 4.3.8 to 4.8.6, written to {mapped_item_ids_json}")
+    print(f"Automatically mapped {len(mapped_item_ids)} item ids from 4.3.8 to 4.8.6, written to {mapped_item_ids_json}")
 
     missed_item_ids = {}
     for key in data_4_3_8.keys():
@@ -57,12 +59,26 @@ def map_item_ids(data_4_3_8, data_4_8_6):
 
     with open(missed_item_ids_json, "w") as f:
         json.dump(missed_item_ids, f, indent=4)
-    print(f"missed {len(missed_item_ids)} item ids from 4.3.8 to 4.8.6, written to {missed_item_ids_json}")
+    print(f"Missed {len(missed_item_ids)} item ids from 4.3.8 to 4.8.6, written to {missed_item_ids_json}")
 
     return mapped_item_ids, missed_item_ids
 
+def add_automatically_with_manual_mapped_item_ids(mapped_item_ids, manual_mapped_item_ids):
+    total_mapped_item_ids = {}
+    total_mapped_item_ids = mapped_item_ids | manual_mapped_item_ids
+
+    with open(total_mapped_item_ids_json, "w") as f:
+        json.dump(total_mapped_item_ids, f, indent=4)
+    print(f"Total mapped item ids: {len(total_mapped_item_ids)}, written to {total_mapped_item_ids_json}")
+
+def get_manual_mapped_item_ids(file):
+    with open(file, "r") as f:
+        return json.load(f)
 
 if __name__ == "__main__":
     data_4_3_8 = convert_input_text_to_json(file_4_3_8_txt, file_4_3_8_json)
     data_4_8_6 = get_4_8_6_data(file_4_8_6_json)
     mapped_item_ids, missed_item_ids = map_item_ids(data_4_3_8, data_4_8_6)
+    manual_mapped_item_ids = get_manual_mapped_item_ids(manual_item_mappings_json)
+    add_automatically_with_manual_mapped_item_ids(mapped_item_ids, manual_mapped_item_ids)
+
