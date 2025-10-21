@@ -92,7 +92,7 @@ def add_item_to_database(config):
     cursor.execute(sql, values)
     conn.commit()
 
-    print("✅ Item inserted successfully!")
+    print(f"✅ Item {config['name']} inserted successfully!")
 
     # 5️⃣ Clean up
     cursor.close()
