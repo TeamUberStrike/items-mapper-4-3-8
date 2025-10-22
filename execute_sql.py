@@ -13,7 +13,21 @@ def add_item_to_database(config):
 
     cursor = conn.cursor()
 
-    # 2️⃣ Prepare the INSERT query
+    # 2️⃣ Check if item already exists
+    check_sql = "SELECT COUNT(*) FROM dbo.Items WHERE ItemId = ?"
+    cursor.execute(check_sql, (config['item_id'],))
+    exists = cursor.fetchone()[0] > 0
+    
+    if exists:
+        print(f"⚠️ Item {config['name']} (ID: {config['item_id']}) already exists, skipping...")
+        cursor.close()
+        conn.close()
+        return
+
+    # 3️⃣ Enable IDENTITY_INSERT to allow explicit values in identity column
+    cursor.execute("SET IDENTITY_INSERT dbo.Items ON")
+
+    # 4️⃣ Prepare the INSERT query
     sql = """
     INSERT INTO dbo.Items (
         ItemId,
@@ -52,7 +66,7 @@ def add_item_to_database(config):
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     """
 
-    # 3️⃣ Define the values to insert
+    # 5️⃣ Define the values to insert
     values = (
         config['item_id'],                  # ItemId
         config['name'],                     # Name
@@ -88,12 +102,15 @@ def add_item_to_database(config):
         0                                   # UsageCount
     )
 
-    # 4️⃣ Execute and commit
+    # 6️⃣ Execute and commit
     cursor.execute(sql, values)
     conn.commit()
 
+    # 7️⃣ Disable IDENTITY_INSERT after insertion
+    cursor.execute("SET IDENTITY_INSERT dbo.Items OFF")
+
     print(f"✅ Item {config['name']} inserted successfully!")
 
-    # 5️⃣ Clean up
+    # 8️⃣ Clean up
     cursor.close()
     conn.close()
