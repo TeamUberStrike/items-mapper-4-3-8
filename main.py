@@ -96,8 +96,6 @@ def create_sql_config_list_from_mapped_item_ids(total_mapped_item_ids, items_lis
                 "type_id": item_4_8_6["ItemType"],
                 "class_id": item_4_8_6["ItemClass"]
             }
-            # if item_4_8_6["Name"] == "Judge":
-            #     breakpoint()
             sql_config_list.append(sql_config)
     if not len(sql_config_list) == len(total_mapped_item_ids):
         raise ValueError("Mismatch in SQL config list length and total mapped item ids length")
