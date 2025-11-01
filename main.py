@@ -15,6 +15,8 @@ total_missed_item_ids_json = "output/total-missed-item-ids.json"
 sql_config_mapped_list_json = "output/sql-config-mapped-list.json"
 sql_config_missed_list_json = "output/sql-config-missed-list.json"
 sql_mapped_item_configs_json = "output/sql-mapped-item-configs.json"
+sql_missed_item_configs_json = "output/sql-missed-item-configs.json"
+sort_missed_items_by_type_json = "input/sort-missed-items-by-type.json"
 
 
 def convert_input_text_to_json(input_file, output_file):
@@ -195,6 +197,77 @@ def get_mapped_item_configs(total_mapped_item_ids, items_list_4_8_6):
 
     return total_config_dict
 
+def get_missed_item_configs(sort_missed_items_by_type):
+    gears = sort_missed_items_by_type["gear"]
+    weapons = sort_missed_items_by_type["weapon"]
+    quick_uses = sort_missed_items_by_type["quick_use"]
+    functionals = sort_missed_items_by_type["functional"]
+    gears_configs = []
+    weapons_configs = []
+    quick_uses_configs = []
+    functional_configs = []
+    for each_gear in gears:
+        config = {}
+        config["LevelRequired"] = 1
+        config["ItemId"] = each_gear
+        config["ArmorPoints"] = 0
+        config["ArmorAbsorptionPercent"] = 0
+        config["ArmorWeight"] = 0
+        gears_configs.append(config)
+    for each_weapon in weapons:
+        config = {}
+        config["LevelRequired"] = 1
+        config["ItemId"] = each_weapon
+        config["DamageKnockback"] = 10
+        config["DamagePerProjectile"] = 25
+        config["RateOfFire"] = 1.0
+        config["AccuracySpread"] = 5.0
+        config["RecoilKickback"] = 5.0
+        config["StartAmmo"] = 30
+        config["MaxAmmo"] = 120
+        config["MissileTimeToDetonate"] = 3.0
+        config["MissileForceImpulse"] = 10.0
+        config["MissileBounciness"] = 0.5
+        config["SplashRadius"] = 2.0
+        config["ProjectilesPerShot"] = 1
+        config["ProjectileSpeed"] = 50.0
+        config["RecoilMovement"] = 5.0
+        weapons_configs.append(config)
+    for each_quick_use in quick_uses:
+        config = {}
+        config["LevelRequired"] = 1
+        config["ItemId"] = each_quick_use
+        config["UsesPerLife"] = 3
+        config["UsesPerRound"] = 5
+        config["UsesPerGame"] = 10
+        config["CoolDownTime"] = 10.0
+        config["WarmUpTime"] = 2.0
+        config["BehaviourType"] = 1
+        quick_uses_configs.append(config)
+    for each_functional in functionals:
+        config = {}
+        config["LevelRequired"] = 1
+        config["ItemId"] = each_functional
+        functional_configs.append(config)
+
+    total_config_dict = {}
+    total_config_dict["gear"] = gears_configs
+    total_config_dict["weapon"] = weapons_configs
+    total_config_dict["quick_use"] = quick_uses_configs
+    total_config_dict["functional"] = functional_configs
+
+    with open(sql_missed_item_configs_json, "w") as f:
+        json.dump(total_config_dict, f, indent=4)
+    total_configs = sum(len(v) for v in total_config_dict.values())
+    print(f"Wrote {total_configs} missed item configs to {sql_missed_item_configs_json}")
+
+    return total_config_dict
+
+
+def get_sorted_items_by_type(file):
+    with open(file, "r") as f:
+        return json.load(f)
+
 if __name__ == "__main__":
     data_4_3_8 = convert_input_text_to_json(file_4_3_8_txt, file_4_3_8_json)
     data_4_8_6 = get_4_8_6_data(file_4_8_6_json)
@@ -206,5 +279,14 @@ if __name__ == "__main__":
     mapped_sql_config = create_sql_config_list_from_mapped_item_ids(total_mapped_item_ids, items_list_4_8_6)
     missed_sql_config = create_sql_config_list_from_missed_item_ids(total_missed_item_ids, data_4_3_8)
     total_sql_config = mapped_sql_config + missed_sql_config
-    get_mapped_item_configs(total_mapped_item_ids, items_list_4_8_6)
+    mapped_item_configs = get_mapped_item_configs(total_mapped_item_ids, items_list_4_8_6)
+    sort_missed_items_by_type = get_sorted_items_by_type(sort_missed_items_by_type_json)
+    missed_item_configs = get_missed_item_configs(sort_missed_items_by_type)
+    # merge two dicts by combining lists for each key
+    total_item_configs = {}
+    for key in mapped_item_configs.keys():
+        total_item_configs[key] = mapped_item_configs[key] + missed_item_configs[key]
+    
+    total_configs_count = sum(len(v) for v in total_item_configs.values())
+    print(f"Total item configs: {total_configs_count}")
 
