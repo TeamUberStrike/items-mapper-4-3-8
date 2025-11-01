@@ -145,4 +145,4 @@ if __name__ == "__main__":
     mapped_sql_config = create_sql_config_list_from_mapped_item_ids(total_mapped_item_ids, items_list_4_8_6)
     missed_sql_config = create_sql_config_list_from_missed_item_ids(total_missed_item_ids, data_4_3_8)
     total_sql_config = mapped_sql_config + missed_sql_config
-    add_to_items_database(total_sql_config)
+
