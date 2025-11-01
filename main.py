@@ -15,6 +15,7 @@ total_missed_item_ids_json = "output/total-missed-item-ids.json"
 sql_config_mapped_list_json = "output/sql-config-mapped-list.json"
 sql_config_missed_list_json = "output/sql-config-missed-list.json"
 sql_mapped_item_configs_json = "output/sql-mapped-item-configs.json"
+cmune_application_items_json = "output/cmune-application-items.json"
 sql_missed_item_configs_json = "output/sql-missed-item-configs.json"
 sort_missed_items_by_type_json = "input/sort-missed-items-by-type.json"
 
@@ -284,6 +285,33 @@ def add_items_to_configs_database(total_item_configs):
         for config in configs:
             execute_sql.add_item_to_database(table_name, "MvParadisePaintball", config, use_identity_insert=False)
 
+def get_items_for_cmune_application_items_database(total_mapped_item_ids, total_missed_item_ids):
+    config_list = []
+    for item in total_mapped_item_ids.keys():
+        config = {}
+        config["ItemId"] = int(item)
+        config["ApplicationId"] = 1
+        config_list.append(config)
+    
+    for item in total_missed_item_ids:
+        config = {}
+        config["ItemId"] = int(item)
+        config["ApplicationId"] = 1
+        config_list.append(config)
+
+    sorted_items = sorted(config_list, key=lambda x: x["ItemId"])
+
+    with open(cmune_application_items_json, "w") as f:
+        json.dump(sorted_items, f, indent=4)
+
+    print(f"Wrote {len(sorted_items)} for cmune application database to {cmune_application_items_json}")
+
+    return sorted_items
+
+def add_items_to_cmune_application_items_database(config_list):
+    for config in config_list:
+        execute_sql.add_item_to_database("dbo.ItemToApplication", "Cmune", config, use_identity_insert=False)
+
 if __name__ == "__main__":
     data_4_3_8 = convert_input_text_to_json(file_4_3_8_txt, file_4_3_8_json)
     data_4_8_6 = get_4_8_6_data(file_4_8_6_json)
@@ -305,5 +333,7 @@ if __name__ == "__main__":
     
     total_configs_count = sum(len(v) for v in total_item_configs.values())
     print(f"Total item configs: {total_configs_count}")
-    add_items_to_configs_database(total_item_configs)
+    #add_items_to_configs_database(total_item_configs)
+    cmune_application_items = get_items_for_cmune_application_items_database(total_mapped_item_ids, total_missed_item_ids)
+    add_items_to_cmune_application_items_database(cmune_application_items)
 
