@@ -1,6 +1,6 @@
 import pyodbc
 
-def add_item_to_database(table_name, database, values, use_identity_insert=True):
+def add_item_to_database(table_name, database, values, use_identity_insert=True, update_if_exists=False):
 
     # 1️⃣ Connect to SQL Server
     conn = pyodbc.connect(
@@ -20,10 +20,24 @@ def add_item_to_database(table_name, database, values, use_identity_insert=True)
     
     if exists:
         item_name = values.get('Name', 'Unknown')
-        print(f"⚠️ Item {item_name} (ID: {values['ItemId']}) already exists in {table_name}, skipping...")
-        cursor.close()
-        conn.close()
-        return
+        if update_if_exists:
+            # Update existing record
+            update_columns = [col for col in values.keys() if col != 'ItemId']
+            set_clause = ', '.join([f"{col} = ?" for col in update_columns])
+            update_sql = f"UPDATE {table_name} SET {set_clause} WHERE ItemId = ?"
+            update_values = tuple(values[col] for col in update_columns) + (values['ItemId'],)
+            
+            cursor.execute(update_sql, update_values)
+            conn.commit()
+            print(f"🔄 Item {item_name} (ID: {values['ItemId']}) updated in {table_name}!")
+            cursor.close()
+            conn.close()
+            return
+        else:
+            print(f"⚠️ Item {item_name} (ID: {values['ItemId']}) already exists in {table_name}, skipping...")
+            cursor.close()
+            conn.close()
+            return
 
     # 3️⃣ Enable IDENTITY_INSERT to allow explicit values in identity column (only if needed)
     if use_identity_insert:

@@ -312,6 +312,43 @@ def add_items_to_cmune_application_items_database(config_list):
     for config in config_list:
         execute_sql.add_item_to_database("dbo.ItemToApplication", "Cmune", config, use_identity_insert=False)
 
+def correct_type_ids_of_missed_items(sort_missed_items_by_type):
+    config_list = []
+    for item_type, items in sort_missed_items_by_type.items():
+        if item_type == "gear":
+            for each_item in items:
+                config = {}
+                config["ItemId"] = each_item
+                config["TypeId"] = 3
+                config_list.append(config)
+        elif item_type == "weapon":
+            for each_item in items:
+                config = {}
+                config["ItemId"] = each_item
+                config["TypeId"] = 1
+                config_list.append(config)
+        elif item_type == "quick_use":
+            for each_item in items:
+                config = {}
+                config["ItemId"] = each_item
+                config["TypeId"] = 4
+                config_list.append(config)
+        elif item_type == "functional":
+            for each_item in items:
+                config = {}
+                config["ItemId"] = each_item
+                config["TypeId"] = 5
+                config_list.append(config)
+        else:
+            raise ValueError(f"Unsupported item type: {item_type}")
+
+    print(f"Correct {len(config_list)} type ids for missed items")
+    return config_list
+
+def add_corrected_type_ids_to_database(config_list):
+    for config in config_list:
+        execute_sql.add_item_to_database("dbo.Items", "Cmune", config, use_identity_insert=False, update_if_exists=True)
+
 if __name__ == "__main__":
     data_4_3_8 = convert_input_text_to_json(file_4_3_8_txt, file_4_3_8_json)
     data_4_8_6 = get_4_8_6_data(file_4_8_6_json)
@@ -335,5 +372,7 @@ if __name__ == "__main__":
     print(f"Total item configs: {total_configs_count}")
     #add_items_to_configs_database(total_item_configs)
     cmune_application_items = get_items_for_cmune_application_items_database(total_mapped_item_ids, total_missed_item_ids)
-    add_items_to_cmune_application_items_database(cmune_application_items)
+    #add_items_to_cmune_application_items_database(cmune_application_items)
+    corrected_type_ids_of_missed_items = correct_type_ids_of_missed_items(sort_missed_items_by_type)
+    add_corrected_type_ids_to_database(corrected_type_ids_of_missed_items)
 
