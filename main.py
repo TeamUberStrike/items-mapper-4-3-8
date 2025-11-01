@@ -268,6 +268,22 @@ def get_sorted_items_by_type(file):
     with open(file, "r") as f:
         return json.load(f)
 
+def add_items_to_configs_database(total_item_configs):
+    for item_type, configs in total_item_configs.items():
+        if item_type == "gear":
+            table_name = "dbo.ItemGearConfig"
+        elif item_type == "weapon":
+            table_name = "dbo.ItemWeaponConfig"
+        elif item_type == "quick_use":
+            table_name = "dbo.ItemQuickUseConfig"
+        elif item_type == "functional":
+            table_name = "dbo.ItemFunctionalConfig"
+        else:
+            raise ValueError(f"Unsupported item type: {item_type}")
+
+        for config in configs:
+            execute_sql.add_item_to_database(table_name, "MvParadisePaintball", config, use_identity_insert=False)
+
 if __name__ == "__main__":
     data_4_3_8 = convert_input_text_to_json(file_4_3_8_txt, file_4_3_8_json)
     data_4_8_6 = get_4_8_6_data(file_4_8_6_json)
@@ -289,4 +305,5 @@ if __name__ == "__main__":
     
     total_configs_count = sum(len(v) for v in total_item_configs.values())
     print(f"Total item configs: {total_configs_count}")
+    add_items_to_configs_database(total_item_configs)
 
