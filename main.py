@@ -14,6 +14,8 @@ total_mapped_item_ids_json = "output/total-mapped-item-ids.json"
 total_missed_item_ids_json = "output/total-missed-item-ids.json"
 sql_config_mapped_list_json = "output/sql-config-mapped-list.json"
 sql_config_missed_list_json = "output/sql-config-missed-list.json"
+sql_mapped_item_configs_json = "output/sql-mapped-item-configs.json"
+
 
 def convert_input_text_to_json(input_file, output_file):
     data = {}
@@ -134,6 +136,65 @@ def add_to_items_database(total_sql_config):
     for config in total_sql_config:
         execute_sql.add_item_to_database(config)
 
+def get_mapped_item_configs(total_mapped_item_ids, items_list_4_8_6):
+    total_config_dict = {}
+    gear_item_configs = []
+    weapon_gear_configs = []
+    quick_use_configs = []
+    functional_configs = []
+    for item_id_4_3_8, item_id_4_8_6 in total_mapped_item_ids.items():
+        config = {}
+        item = next((item for item in items_list_4_8_6 if item["ID"] == item_id_4_8_6), None)
+        if item is None:
+            raise ValueError(f"Item ID {item_id_4_8_6} not found in items list 4.8.6")
+        config["LevelRequired"] = item["LevelLock"]
+        config["ItemId"] = item_id_4_3_8
+        if item["ItemType"] == 3:
+            config["ArmorPoints"] = item["ArmorPoints"]
+            config["ArmorAbsorptionPercent"] = 0
+            config["ArmorWeight"] = item["ArmorWeight"]
+            gear_item_configs.append(config)
+        elif item["ItemType"] == 1:
+            config["DamageKnockback"] = item["DamageKnockback"]
+            config["DamagePerProjectile"] = item["DamagePerProjectile"]
+            config["RateOfFire"] = item["RateOfFire"]
+            config["AccuracySpread"] = item["AccuracySpread"]
+            config["RecoilKickback"] = item["RecoilKickback"]
+            config["StartAmmo"] = item["StartAmmo"]
+            config["MaxAmmo"] = item["MaxAmmo"]
+            config["MissileTimeToDetonate"] = item["MissileTimeToDetonate"]
+            config["MissileForceImpulse"] = item["MissileForceImpulse"]
+            config["MissileBounciness"] = item["MissileBounciness"]
+            config["SplashRadius"] = item["SplashRadius"]
+            config["ProjectilesPerShot"] = item["ProjectilesPerShot"]
+            config["ProjectileSpeed"] = item["ProjectileSpeed"]
+            config["RecoilMovement"] = item["RecoilMovement"]
+            weapon_gear_configs.append(config)
+        elif item["ItemType"] == 4:
+            config["UsesPerLife"] = item["UsesPerLife"]
+            config["UsesPerRound"] = item["UsesPerRound"]
+            config["UsesPerGame"] = item["UsesPerGame"]
+            config["CoolDownTime"] = item["CoolDownTime"]
+            config["WarmUpTime"] = item["WarmUpTime"]
+            config["BehaviourType"] = item["BehaviourType"]
+            quick_use_configs.append(config)
+        elif item["ItemType"] == 5:
+            functional_configs.append(config)
+        else:
+            raise ValueError(f"Item ID {item_id_4_8_6} has unsupported ItemType {item['ItemType']}")
+
+    total_config_dict["gear"] = gear_item_configs
+    total_config_dict["weapon"] = weapon_gear_configs
+    total_config_dict["quick_use"] = quick_use_configs
+    total_config_dict["functional"] = functional_configs
+
+    with open(sql_mapped_item_configs_json, "w") as f:
+        json.dump(total_config_dict, f, indent=4)
+    total_configs = sum(len(v) for v in total_config_dict.values())
+    print(f"Wrote {total_configs} mapped item configs to {sql_mapped_item_configs_json}")
+
+    return total_config_dict
+
 if __name__ == "__main__":
     data_4_3_8 = convert_input_text_to_json(file_4_3_8_txt, file_4_3_8_json)
     data_4_8_6 = get_4_8_6_data(file_4_8_6_json)
@@ -145,4 +206,5 @@ if __name__ == "__main__":
     mapped_sql_config = create_sql_config_list_from_mapped_item_ids(total_mapped_item_ids, items_list_4_8_6)
     missed_sql_config = create_sql_config_list_from_missed_item_ids(total_missed_item_ids, data_4_3_8)
     total_sql_config = mapped_sql_config + missed_sql_config
+    get_mapped_item_configs(total_mapped_item_ids, items_list_4_8_6)
 
