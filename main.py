@@ -130,6 +130,10 @@ def get_total_missed_item_ids(total_mapped_item_ids, data_4_3_8):
     print(f"Total missed item ids with {len(missed_item_ids)} items written to {total_missed_item_ids_json}")
     return missed_item_ids
 
+def add_to_items_database(total_sql_config):
+    for config in total_sql_config:
+        execute_sql.add_item_to_database(config)
+
 if __name__ == "__main__":
     data_4_3_8 = convert_input_text_to_json(file_4_3_8_txt, file_4_3_8_json)
     data_4_8_6 = get_4_8_6_data(file_4_8_6_json)
@@ -141,5 +145,4 @@ if __name__ == "__main__":
     mapped_sql_config = create_sql_config_list_from_mapped_item_ids(total_mapped_item_ids, items_list_4_8_6)
     missed_sql_config = create_sql_config_list_from_missed_item_ids(total_missed_item_ids, data_4_3_8)
     total_sql_config = mapped_sql_config + missed_sql_config
-    for config in total_sql_config:
-        execute_sql.add_item_to_database(config)
+    add_to_items_database(total_sql_config)
