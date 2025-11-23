@@ -95,11 +95,38 @@ def create_sql_config_list_from_mapped_item_ids(total_mapped_item_ids, items_lis
         item_4_8_6 = next((item for item in items_list_4_8_6 if item["ID"] == value), None)
         if item_4_8_6:
             sql_config = {
-                "item_id": int(key),
-                "name": item_4_8_6["Name"],
-                "description": item_4_8_6["Description"] or "",
-                "type_id": item_4_8_6["ItemType"],
-                "class_id": item_4_8_6["ItemClass"]
+                "ItemId": int(key),
+                "Name": item_4_8_6["Name"],
+                "Description": item_4_8_6["Description"] or "",
+                "TypeId": item_4_8_6["ItemType"],
+                "ClassId": item_4_8_6["ItemClass"],
+                "CreditsPerDayShop": 1000,
+                "PointsPerDayShop": 1000,
+                "IsForSale": True,
+                "AmountRemainingInShop": 100000,
+                "IsFeatured": False,
+                "PurchaseType": 1,
+                "PermanentCreditsShop": 100000,
+                "IsNew": False,
+                "IsPopular": False,
+                "PackOneAmount": 1,
+                "PackTwoAmount": 0,
+                "PackThreeAmount": 0,
+                "MaximumOwnableAmount":            1,     
+                "Enable1Day":                      True,  
+                "Enable7Days":                     True,  
+                "Enable30Days":                    True,  
+                "Enable90Days":                    False, 
+                "MaximumDurationDays":             30,    
+                "PermanentPointsShop":             100000,
+                "IsDisable":                       False, 
+                "CustomProperties":                '',    
+                "IsEnabledInShop":                 True,  
+                "CreditsPerDayUnderground":        1000,  
+                "PermanentCreditsUnderground":     100000,
+                "IsEnabledInUnderground":          False, 
+                "AmountRemainingInUnderground":    100000,
+                "UsageCount":                        0       
             }
             sql_config_list.append(sql_config)
     if not len(sql_config_list) == len(total_mapped_item_ids):
@@ -113,11 +140,38 @@ def create_sql_config_list_from_missed_item_ids(total_missed_item_ids, data_4_3_
     sql_config_list = []
     for item in total_missed_item_ids:
         sql_config = {
-            "item_id": int(item),
-            "name": data_4_3_8[item],
-            "description": "",
-            "type_id": 6,
-            "class_id": 22
+            "ItemId": int(item),
+            "Name": data_4_3_8[item],
+            "Description": "",
+            "TypeId": 6,
+            "ClassId": 22,
+            "CreditsPerDayShop": 1000,
+            "PointsPerDayShop": 1000,
+            "IsForSale": True,
+            "AmountRemainingInShop": 100000,
+            "IsFeatured": False,
+            "PurchaseType": 1,
+            "PermanentCreditsShop": 100000,
+            "IsNew": False,
+            "IsPopular": False,
+            "PackOneAmount": 1,
+            "PackTwoAmount": 0,
+            "PackThreeAmount": 0,
+            "MaximumOwnableAmount":            1,     
+            "Enable1Day":                      True,  
+            "Enable7Days":                     True,  
+            "Enable30Days":                    True,  
+            "Enable90Days":                    False, 
+            "MaximumDurationDays":             30,    
+            "PermanentPointsShop":             100000,
+            "IsDisable":                       False, 
+            "CustomProperties":                '',    
+            "IsEnabledInShop":                 True,  
+            "CreditsPerDayUnderground":        1000,  
+            "PermanentCreditsUnderground":     100000,
+            "IsEnabledInUnderground":          False, 
+            "AmountRemainingInUnderground":    100000,
+            "UsageCount":                        0       
         }
         sql_config_list.append(sql_config)
     with open(sql_config_missed_list_json, "w") as f:
@@ -345,7 +399,7 @@ def correct_type_ids_of_missed_items(sort_missed_items_by_type):
     print(f"Correct {len(config_list)} type ids for missed items")
     return config_list
 
-def add_corrected_type_ids_to_database(config_list):
+def add_or_update_items_in_cmune_database(config_list):
     for config in config_list:
         execute_sql.add_item_to_database("dbo.Items", "Cmune", config, use_identity_insert=False, update_if_exists=True)
 
@@ -360,6 +414,7 @@ if __name__ == "__main__":
     mapped_sql_config = create_sql_config_list_from_mapped_item_ids(total_mapped_item_ids, items_list_4_8_6)
     missed_sql_config = create_sql_config_list_from_missed_item_ids(total_missed_item_ids, data_4_3_8)
     total_sql_config = mapped_sql_config + missed_sql_config
+    add_or_update_items_in_cmune_database(total_sql_list)
     mapped_item_configs = get_mapped_item_configs(total_mapped_item_ids, items_list_4_8_6)
     sort_missed_items_by_type = get_sorted_items_by_type(sort_missed_items_by_type_json)
     missed_item_configs = get_missed_item_configs(sort_missed_items_by_type)
@@ -374,5 +429,5 @@ if __name__ == "__main__":
     cmune_application_items = get_items_for_cmune_application_items_database(total_mapped_item_ids, total_missed_item_ids)
     #add_items_to_cmune_application_items_database(cmune_application_items)
     corrected_type_ids_of_missed_items = correct_type_ids_of_missed_items(sort_missed_items_by_type)
-    add_corrected_type_ids_to_database(corrected_type_ids_of_missed_items)
+    add_or_update_items_in_cmune_database(corrected_type_ids_of_missed_items)
 
