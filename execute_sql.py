@@ -1,19 +1,20 @@
 import pyodbc
 
-def add_item_to_database(table_name, database, values, use_identity_insert=True, update_if_exists=False):
+def add_item_to_database(table_name, database, values, use_identity_insert=False, update_if_exists=False):
 
     # 1️⃣ Connect to SQL Server
     conn = pyodbc.connect(
         "DRIVER={ODBC Driver 17 for SQL Server};"
-        "SERVER=DESKTOP-LNSADFU\MYSECONDSERVER;"          # or 'hostname\\SQLEXPRESS'
+        "SERVER=192.168.1.195;"
         f"DATABASE={database};"
         "UID=sa;"
-        "PWD=cmune$1;"
+        "PWD=YourStrong@Password123;"
     )
 
     cursor = conn.cursor()
 
     # 2️⃣ Check if item already exists
+    #if update_if_exists is True
     check_sql = f"SELECT COUNT(*) FROM {table_name} WHERE ItemId = ?"
     cursor.execute(check_sql, (values['ItemId'],))
     exists = cursor.fetchone()[0] > 0

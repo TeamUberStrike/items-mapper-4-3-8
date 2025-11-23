@@ -1,6 +1,7 @@
 import json
 import re
 import execute_sql
+import os
 import pdb
 
 # file paths
@@ -399,11 +400,12 @@ def correct_type_ids_of_missed_items(sort_missed_items_by_type):
     print(f"Correct {len(config_list)} type ids for missed items")
     return config_list
 
-def add_or_update_items_in_cmune_database(config_list):
+def add_or_update_items_in_cmune_database(config_list, use_identity_insert=False):
     for config in config_list:
-        execute_sql.add_item_to_database("dbo.Items", "Cmune", config, use_identity_insert=False, update_if_exists=True)
+        execute_sql.add_item_to_database("dbo.Items", "Cmune", config, use_identity_insert, update_if_exists=True)
 
 if __name__ == "__main__":
+    os.makedirs("output", exist_ok=True)
     data_4_3_8 = convert_input_text_to_json(file_4_3_8_txt, file_4_3_8_json)
     data_4_8_6 = get_4_8_6_data(file_4_8_6_json)
     items_list_4_8_6 = get_items_list_4_8_6(data_4_8_6)
@@ -414,7 +416,7 @@ if __name__ == "__main__":
     mapped_sql_config = create_sql_config_list_from_mapped_item_ids(total_mapped_item_ids, items_list_4_8_6)
     missed_sql_config = create_sql_config_list_from_missed_item_ids(total_missed_item_ids, data_4_3_8)
     total_sql_config = mapped_sql_config + missed_sql_config
-    add_or_update_items_in_cmune_database(total_sql_list)
+    add_or_update_items_in_cmune_database(total_sql_config, use_identity_insert=True)
     mapped_item_configs = get_mapped_item_configs(total_mapped_item_ids, items_list_4_8_6)
     sort_missed_items_by_type = get_sorted_items_by_type(sort_missed_items_by_type_json)
     missed_item_configs = get_missed_item_configs(sort_missed_items_by_type)
@@ -425,9 +427,9 @@ if __name__ == "__main__":
     
     total_configs_count = sum(len(v) for v in total_item_configs.values())
     print(f"Total item configs: {total_configs_count}")
-    #add_items_to_configs_database(total_item_configs)
+    add_items_to_configs_database(total_item_configs)
     cmune_application_items = get_items_for_cmune_application_items_database(total_mapped_item_ids, total_missed_item_ids)
-    #add_items_to_cmune_application_items_database(cmune_application_items)
+    add_items_to_cmune_application_items_database(cmune_application_items)
     corrected_type_ids_of_missed_items = correct_type_ids_of_missed_items(sort_missed_items_by_type)
     add_or_update_items_in_cmune_database(corrected_type_ids_of_missed_items)
 
