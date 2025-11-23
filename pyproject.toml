@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "items-mapper-4-3-8"
+version = "0.1.0"
+description = ""
+authors = ["Xaver Gruber <xaver.max.gruber@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pyodbc = "^5.3.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
