@@ -8,6 +8,7 @@ import pdb
 file_4_3_8_txt = "input/items-4-3-8.txt"
 file_4_3_8_json = "output/items-4-3-8.json"
 file_4_8_6_json = "input/items-4-8-6.json"
+file_4_3_9_json = "input/items-4-3-9.json"
 manual_item_mappings_json = "input/manual-item-mappings.json"
 mapped_item_ids_json = "output/mapped-item-ids.json"
 missed_item_ids_json = "output/missed-item-ids.json"
@@ -241,6 +242,8 @@ def get_mapped_item_configs(total_mapped_item_ids, items_list_4_8_6):
         else:
             raise ValueError(f"Item ID {item_id_4_8_6} has unsupported ItemType {item['ItemType']}")
 
+
+
     total_config_dict["gear"] = gear_item_configs
     total_config_dict["weapon"] = weapon_gear_configs
     total_config_dict["quick_use"] = quick_use_configs
@@ -250,6 +253,60 @@ def get_mapped_item_configs(total_mapped_item_ids, items_list_4_8_6):
         json.dump(total_config_dict, f, indent=4)
     total_configs = sum(len(v) for v in total_config_dict.values())
     print(f"Wrote {total_configs} mapped item configs to {sql_mapped_item_configs_json}")
+
+    return total_config_dict
+
+
+def get_item_configs(items_list):
+    total_config_dict = {}
+    gear_item_configs = []
+    weapon_gear_configs = []
+    quick_use_configs = []
+    functional_configs = []
+    for item in items_list:
+        config = {}
+        config["LevelRequired"] = item["LevelLock"]
+        config["ItemId"] = item["ID"] 
+        if item["ItemType"] == 3:
+            config["ArmorPoints"] = item["ArmorPoints"]
+            config["ArmorAbsorptionPercent"] = 0
+            config["ArmorWeight"] = item["ArmorWeight"]
+            gear_item_configs.append(config)
+        elif item["ItemType"] == 1:
+            config["DamageKnockback"] = item["DamageKnockback"]
+            config["DamagePerProjectile"] = item["DamagePerProjectile"]
+            config["RateOfFire"] = item["RateOfFire"]
+            config["AccuracySpread"] = item["AccuracySpread"]
+            config["RecoilKickback"] = item["RecoilKickback"]
+            config["StartAmmo"] = item["StartAmmo"]
+            config["MaxAmmo"] = item["MaxAmmo"]
+            config["MissileTimeToDetonate"] = item["MissileTimeToDetonate"]
+            config["MissileForceImpulse"] = item["MissileForceImpulse"]
+            config["MissileBounciness"] = item["MissileBounciness"]
+            config["SplashRadius"] = item["SplashRadius"]
+            config["ProjectilesPerShot"] = item["ProjectilesPerShot"]
+            config["ProjectileSpeed"] = item["ProjectileSpeed"]
+            config["RecoilMovement"] = item["RecoilMovement"]
+            weapon_gear_configs.append(config)
+        elif item["ItemType"] == 4:
+            config["UsesPerLife"] = item["UsesPerLife"]
+            config["UsesPerRound"] = item["UsesPerRound"]
+            config["UsesPerGame"] = item["UsesPerGame"]
+            config["CoolDownTime"] = item["CoolDownTime"]
+            config["WarmUpTime"] = item["WarmUpTime"]
+            config["BehaviourType"] = item["BehaviourType"]
+            quick_use_configs.append(config)
+        elif item["ItemType"] == 5:
+            functional_configs.append(config)
+        else:
+            raise ValueError(f"Item ID {item_id_4_8_6} has unsupported ItemType {item['ItemType']}")
+
+    total_config_dict["gear"] = gear_item_configs
+    total_config_dict["weapon"] = weapon_gear_configs
+    total_config_dict["quick_use"] = quick_use_configs
+    total_config_dict["functional"] = functional_configs
+
+    total_configs = sum(len(v) for v in total_config_dict.values())
 
     return total_config_dict
 
@@ -338,7 +395,7 @@ def add_items_to_configs_database(total_item_configs):
             raise ValueError(f"Unsupported item type: {item_type}")
 
         for config in configs:
-            execute_sql.add_item_to_database(table_name, "MvParadisePaintball", config, use_identity_insert=False)
+            execute_sql.add_item_to_database(table_name, "MvParadisePaintball", config, use_identity_insert=False, update_if_exists=True)
 
 def get_items_for_cmune_application_items_database(total_mapped_item_ids, total_missed_item_ids):
     config_list = []
@@ -406,30 +463,32 @@ def add_or_update_items_in_cmune_database(config_list, use_identity_insert=False
 
 if __name__ == "__main__":
     os.makedirs("output", exist_ok=True)
-    data_4_3_8 = convert_input_text_to_json(file_4_3_8_txt, file_4_3_8_json)
-    data_4_8_6 = get_4_8_6_data(file_4_8_6_json)
-    items_list_4_8_6 = get_items_list_4_8_6(data_4_8_6)
-    mapped_item_ids, missed_item_ids = map_item_ids(data_4_3_8, items_list_4_8_6)
-    manual_mapped_item_ids = get_manual_mapped_item_ids(manual_item_mappings_json)
-    total_mapped_item_ids = add_automatically_with_manual_mapped_item_ids(mapped_item_ids, manual_mapped_item_ids)
-    total_missed_item_ids = get_total_missed_item_ids(total_mapped_item_ids, data_4_3_8)
-    mapped_sql_config = create_sql_config_list_from_mapped_item_ids(total_mapped_item_ids, items_list_4_8_6)
-    missed_sql_config = create_sql_config_list_from_missed_item_ids(total_missed_item_ids, data_4_3_8)
-    total_sql_config = mapped_sql_config + missed_sql_config
-    add_or_update_items_in_cmune_database(total_sql_config, use_identity_insert=True)
-    mapped_item_configs = get_mapped_item_configs(total_mapped_item_ids, items_list_4_8_6)
-    sort_missed_items_by_type = get_sorted_items_by_type(sort_missed_items_by_type_json)
-    missed_item_configs = get_missed_item_configs(sort_missed_items_by_type)
-    # merge two dicts by combining lists for each key
-    total_item_configs = {}
-    for key in mapped_item_configs.keys():
-        total_item_configs[key] = mapped_item_configs[key] + missed_item_configs[key]
-    
-    total_configs_count = sum(len(v) for v in total_item_configs.values())
-    print(f"Total item configs: {total_configs_count}")
-    add_items_to_configs_database(total_item_configs)
-    cmune_application_items = get_items_for_cmune_application_items_database(total_mapped_item_ids, total_missed_item_ids)
-    add_items_to_cmune_application_items_database(cmune_application_items)
-    corrected_type_ids_of_missed_items = correct_type_ids_of_missed_items(sort_missed_items_by_type)
-    add_or_update_items_in_cmune_database(corrected_type_ids_of_missed_items)
+    data_4_3_9 = get_4_8_6_data(file_4_3_9_json)
+
+    items_list_4_3_9 = get_items_list_4_8_6(data_4_3_9)
+    total_config = get_item_configs(items_list_4_3_9)
+    add_items_to_configs_database(total_config)
+    #    mapped_item_ids, missed_item_ids = map_item_ids(data_4_3_8, items_list_4_8_6)
+    #    manual_mapped_item_ids = get_manual_mapped_item_ids(manual_item_mappings_json)
+    #    total_mapped_item_ids = add_automatically_with_manual_mapped_item_ids(mapped_item_ids, manual_mapped_item_ids)
+    #    total_missed_item_ids = get_total_missed_item_ids(total_mapped_item_ids, data_4_3_8)
+    #    mapped_sql_config = create_sql_config_list_from_mapped_item_ids(total_mapped_item_ids, items_list_4_8_6)
+    #    missed_sql_config = create_sql_config_list_from_missed_item_ids(total_missed_item_ids, data_4_3_8)
+    #    total_sql_config = mapped_sql_config + missed_sql_config
+    #    add_or_update_items_in_cmune_database(total_sql_config, use_identity_insert=True)
+    #    mapped_item_configs = get_mapped_item_configs(total_mapped_item_ids, items_list_4_8_6)
+    #    sort_missed_items_by_type = get_sorted_items_by_type(sort_missed_items_by_type_json)
+    #    missed_item_configs = get_missed_item_configs(sort_missed_items_by_type)
+    #    # merge two dicts by combining lists for each key
+    #    total_item_configs = {}
+    #    for key in mapped_item_configs.keys():
+    #        total_item_configs[key] = mapped_item_configs[key] + missed_item_configs[key]
+    #    
+    #    total_configs_count = sum(len(v) for v in total_item_configs.values())
+    #    print(f"Total item configs: {total_configs_count}")
+    #    add_items_to_configs_database(total_item_configs)
+    #    cmune_application_items = get_items_for_cmune_application_items_database(total_mapped_item_ids, total_missed_item_ids)
+    #    add_items_to_cmune_application_items_database(cmune_application_items)
+    #    corrected_type_ids_of_missed_items = correct_type_ids_of_missed_items(sort_missed_items_by_type)
+    #    add_or_update_items_in_cmune_database(corrected_type_ids_of_missed_items)
 
