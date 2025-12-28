@@ -181,6 +181,47 @@ def create_sql_config_list_from_missed_item_ids(total_missed_item_ids, data_4_3_
     print(f"SQL config list with {len(sql_config_list)} items written to {sql_config_missed_list_json}")
     return sql_config_list
 
+
+def create_cmune_sql_config_list(items):
+    sql_config_list = []
+    for item in items:
+        sql_config = {
+            "ItemId": int(item["ID"]),
+            "TypeId": int(item["ItemType"]),
+            "ClassId": int(item["ItemClass"]),
+            "AmountRemainingInShop": -1,
+            "Name": item["Name"],
+            "Description": item.get("Description") or "",
+            "CreditsPerDayShop": 1000,
+            "PointsPerDayShop": 1000,
+            "IsForSale": True,
+            "IsFeatured": False,
+            "PurchaseType": 1,
+            "PermanentCreditsShop": 100000,
+            "IsNew": False,
+            "IsPopular": False,
+            "PackOneAmount": 1,
+            "PackTwoAmount": 0,
+            "PackThreeAmount": 0,
+            "MaximumOwnableAmount":            1,     
+            "Enable1Day":                      True,  
+            "Enable7Days":                     True,  
+            "Enable30Days":                    True,  
+            "Enable90Days":                    False, 
+            "MaximumDurationDays":             30,    
+            "PermanentPointsShop":             100000,
+            "IsDisable":                       False, 
+            "CustomProperties":                '',    
+            "IsEnabledInShop":                 True,  
+            "CreditsPerDayUnderground":        1000,  
+            "PermanentCreditsUnderground":     100000,
+            "IsEnabledInUnderground":          False, 
+            "AmountRemainingInUnderground":    100000,
+            "UsageCount":                        0       
+        }
+        sql_config_list.append(sql_config)
+    return sql_config_list
+
 def get_total_missed_item_ids(total_mapped_item_ids, data_4_3_8):
     missed_item_ids = []
     for item in data_4_3_8.keys():
@@ -468,6 +509,8 @@ if __name__ == "__main__":
     items_list_4_3_9 = get_items_list_4_8_6(data_4_3_9)
     total_config = get_item_configs(items_list_4_3_9)
     add_items_to_configs_database(total_config)
+    cmune_database_list = create_cmune_sql_config_list(items_list_4_3_9)
+    add_or_update_items_in_cmune_database(cmune_database_list, use_identity_insert=True)
     #    mapped_item_ids, missed_item_ids = map_item_ids(data_4_3_8, items_list_4_8_6)
     #    manual_mapped_item_ids = get_manual_mapped_item_ids(manual_item_mappings_json)
     #    total_mapped_item_ids = add_automatically_with_manual_mapped_item_ids(mapped_item_ids, manual_mapped_item_ids)
