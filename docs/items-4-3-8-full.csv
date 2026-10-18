@@ -1,0 +1,380 @@
+id,client_prefab,display_name,type,class,in_client,in_items_4_3_8_txt
+1000,Artwork/Weapons/Melee/TheSplatbat/Prefabs/TheSplatbat.prefab,Splatbat,Weapon,Melee,yes,yes
+1001,Artwork/Weapons/HG/Default/Prefabs/HandGun.prefab,Handgun,Weapon,Handgun,yes,yes
+1002,Artwork/Weapons/MG/Default/Prefabs/MachineGun.prefab,Machine Gun,Weapon,Machinegun,yes,yes
+1003,Artwork/Weapons/SG/PaintShotty/Prefabs/PaintShotty.prefab,Shotgun,Weapon,Shotgun,yes,yes
+1004,Artwork/Weapons/SR/Default/Prefabs/PaintSniper.prefab,Sniper Rifle,Weapon,Sniper,yes,yes
+1005,Artwork/Weapons/CN/Default/Prefabs/Cannon.prefab,Cannon,Weapon,Cannon,yes,yes
+1006,Artwork/Weapons/SP/Default/Prefabs/SplatterGun.prefab,Splatter Gun,Weapon,Splattergun,yes,yes
+1007,Artwork/Weapons/LR/Default/Prefabs/Launcher.prefab,Grenade Launcher,Weapon,Launcher,yes,yes
+1008,Artwork/Weapons/HG/Judge/Prefabs/Judge.prefab,Judge,Weapon,Handgun,yes,yes
+1009,Artwork/Weapons/HG/Jury/Prefabs/Jury.prefab,Jury,Weapon,Handgun,yes,yes
+1010,Artwork/Weapons/HG/Executioner/Prefabs/Executioner.prefab,Executioner,Weapon,Handgun,yes,yes
+1011,Artwork/Weapons/MG/ShadowGun/Prefabs/ShadowGun.prefab,Shadow Gun,Weapon,Machinegun,yes,yes
+1012,Artwork/Weapons/MG/BattleSnake/Prefabs/BattleSnake.prefab,Battlesnake,Weapon,Machinegun,yes,yes
+1013,Artwork/Weapons/SG/SnotGun/Prefabs/SnotGun.prefab,Snotgun,Weapon,Shotgun,yes,yes
+1014,Artwork/Weapons/SG/PainHammer/PainHammer.prefab,Pain Hammer,Weapon,Shotgun,yes,yes
+1015,Artwork/Weapons/SG/Thunderbuss/Prefabs/ThunderbussBlue.prefab,Thunderbuss,Weapon,Shotgun,yes,yes
+1016,Artwork/Weapons/SR/OrdinatorRifle/Prefabs/OrdinatorRifle.prefab,Ordinator Rifle,Weapon,Sniper,yes,yes
+1017,Artwork/Weapons/SR/Deliverator/Prefabs/Deliverator.prefab,Deliverator,Weapon,Sniper,yes,yes
+1018,Artwork/Weapons/SR/Vanquisher/Prefabs/Vanquisher.prefab,Vanquisher,Weapon,Sniper,yes,yes
+1019,Artwork/Weapons/CN/Paintzerfaust/Prefabs/Paintzerfaust.prefab,Painzerfaust,Weapon,Cannon,yes,yes
+1020,Artwork/Weapons/CN/ForceCannon/Prefabs/ForceCannon.prefab,Force Cannon,Weapon,Cannon,yes,yes
+1021,Artwork/Weapons/SP/Vandalizer/Prefabs/Vandalizer.prefab,Vandalizer,Weapon,Splattergun,yes,yes
+1022,Artwork/Weapons/SP/MadSplatter/Prefabs/MadSplatter.prefab,Mad Splatter,Weapon,Splattergun,yes,yes
+1023,Artwork/Weapons/SP/MagmaRifle/Prefabs/MagmaRifle.prefab,Magma Rifle,Weapon,Splattergun,yes,yes
+1024,Artwork/Weapons/LR/Enamelator/Prefabs/Enamelator.prefab,Enamelator,Weapon,Launcher,yes,yes
+1025,Artwork/Weapons/LR/MortarExporter/Prefabs/MortarExporter.prefab,Mortar Exporter,Weapon,Launcher,yes,yes
+1026,Artwork/Weapons/LR/FinalWord/Prefabs/FinalWord.prefab,The Final Word,Weapon,Launcher,yes,yes
+1031,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/Sunglasses.prefab,Sunglasses,Gear,Face,yes,yes
+1033,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/BeardAndMo.prefab,Beard and Mo,Gear,Face,yes,yes
+1045,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/ProtectivePants.prefab,Iron Pants of Resistance,Gear,Lower body,yes,yes
+1051,,Jungle Camo Pants,,,no,yes
+1053,,Black Hair,,,no,yes
+1054,,Blue Hair,,,no,yes
+1055,,Red Hair,,,no,yes
+1075,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/GreenBeret.prefab,Green Beret,Gear,Head,yes,yes
+1084,Artwork/Characters/LutzRavinoff/Base/Prefabs/LutzDefaultGearHead.prefab,Default Hair,Gear,Head,yes,yes
+1085,,Default Goggles,,,no,yes
+1086,Artwork/Characters/LutzRavinoff/Base/Prefabs/LutzDefaultGearGloves.prefab,Default Gloves,Gear,Gloves,yes,yes
+1087,Artwork/Characters/LutzRavinoff/Base/Prefabs/LutzDefaultGearUpperBody.prefab,Jacket of Boredom,Gear,Upper body,yes,yes
+1088,Artwork/Characters/LutzRavinoff/Base/Prefabs/LutzDefaultGearLowerBody.prefab,Trousers of Tedium,Gear,Lower body,yes,yes
+1089,Artwork/Characters/LutzRavinoff/Base/Prefabs/LutzDefaultGearBoots.prefab,Ordinary Boots,Gear,Boots,yes,yes
+1094,no prefab (scene list entry),Privateer License,Functional,FunctionalGeneral,yes,yes
+1098,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/Admin.prefab,Admin Shirt,Gear,Upper body,yes,yes
+1099,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/BetaHero.prefab,Beta Hero,Gear,Upper body,yes,yes
+1100,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/DefaultShirt.prefab,Green Shirt,Gear,Upper body,yes,yes
+1101,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/NinjaUpperbody.prefab,SForce Ninja Armor,Gear,Upper body,yes,yes
+1102,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/NinjaLowerbody.prefab,SForce Ninja Greaves,Gear,Lower body,yes,yes
+1103,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/NinjaHead.prefab,SForce Ninja Headband,Gear,Head,yes,yes
+1104,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/NinjaMaskBlack.prefab,SForce Ninja Mask,Gear,Face,yes,yes
+1105,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/NinjaMaskTeeth.prefab,SForce Ninja Maw,Gear,Face,yes,yes
+1106,Artwork/Characters/LutzRavinoff/Gear/Gloves/Prefabs/NinjaGloves.prefab,SForce Ninja Claws,Gear,Gloves,yes,yes
+1107,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/NinjaShoes.prefab,SForce Ninja Tabi,Gear,Boots,yes,yes
+1108,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/PirateHead1.prefab,Cap'n Bradford's Hat,Gear,Head,yes,yes
+1109,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/PirateEyepatch.prefab,Cap'n Bradford's Patch,Gear,Face,yes,yes
+1110,Artwork/Characters/LutzRavinoff/Gear/Gloves/Prefabs/PirateGloves.prefab,Cap'n Bradford's Gloves,Gear,Gloves,yes,yes
+1111,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/PirateUpperbody.prefab,Cap'n Bradford's Jacket,Gear,Upper body,yes,yes
+1112,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/PirateLowerbody.prefab,Cap'n Bradford's Pants,Gear,Lower body,yes,yes
+1113,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/PirateShoes.prefab,Cap'n Bradford's Boots,Gear,Boots,yes,yes
+1114,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/PirateHead2.prefab,Red Pirate Bandanna,Gear,Head,yes,yes
+1115,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/RamboHead.prefab,The Commandanna,Gear,Head,yes,yes
+1116,Artwork/Characters/LutzRavinoff/Gear/Gloves/Prefabs/RamboGloves.prefab,The Goon Crushers,Gear,Gloves,yes,yes
+1117,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/RamboUpperbody.prefab,The Muscle Suit,Gear,Upper body,yes,yes
+1118,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/RamboLowerbody.prefab,The Jeans of Manliness,Gear,Lower body,yes,yes
+1119,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/RamboShoes.prefab,The Tramplers,Gear,Boots,yes,yes
+1120,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/DundeeHead.prefab,The Croc Skin Akubra,Gear,Head,yes,yes
+1121,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/DundeeUpperbody.prefab,The Croc Skin Jacket,Gear,Upper body,yes,yes
+1122,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/DundeeLowerbody.prefab,The Croc Skin Pants,Gear,Lower body,yes,yes
+1123,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/DundeeShoes.prefab,The Croc Skin Boots,Gear,Boots,yes,yes
+1136,Artwork/Weapons/Melee/Prefabs/Kantana.prefab,Mythic Edge,Weapon,Melee,yes,yes
+1137,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/PumpkinHead.prefab,Pumpkin o' Gloom,Gear,Head,yes,yes
+1138,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/WhiteSkull.prefab,The White Skull,Gear,Face,yes,yes
+1139,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/HockeyMask.prefab,Mask of Terror,Gear,Face,yes,yes
+1140,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/SkeletonUpperBody.prefab,The Bone Cage,Gear,Upper body,yes,yes
+1141,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/SkeletonLowerBody.prefab,Lifeless Legs,Gear,Lower body,yes,yes
+1142,Artwork/Weapons/Melee/Prefabs/Sickle.prefab,The Harvester of Noobs,Weapon,Melee,yes,yes
+1143,Artwork/Characters/LutzRavinoff/Gear/Gloves/Prefabs/SkeletonGloves.prefab,Cadaverous Claws,Gear,Gloves,yes,yes
+1144,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/SkeletonShoes.prefab,Skeletal Shoes,Gear,Boots,yes,yes
+1145,Artwork/Weapons/CN/EnigmaCannon/Prefabs/EnigmaCannon.prefab,Enigma Cannon,Weapon,Cannon,yes,yes
+1146,Artwork/Weapons/MG/UMG/Prefabs/UMG.prefab,UMG,Weapon,Machinegun,yes,yes
+1147,Artwork/Weapons/SR/ParticleLance/Prefabs/ParticleLance.prefab,Particle Lance,Weapon,Sniper,yes,yes
+1148,Artwork/Weapons/Melee/Prefabs/DundeeKnifeFPS.prefab,The Croc Cutter,Weapon,Melee,yes,yes
+1149,Artwork/Weapons/Melee/Prefabs/RamboKnifeFPS.prefab,Stalwart Steel,Weapon,Melee,yes,yes
+1150,Artwork/Weapons/Melee/Prefabs/PirateKnifeFPS.prefab,Bradford's Broadsword,Weapon,Melee,yes,yes
+1151,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/BlackPants.prefab,Black Suit Pants,Gear,Lower body,yes,yes
+1152,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/MafiaLowerbody.prefab,Grey Suit Pants,Gear,Lower body,yes,yes
+1153,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/007.prefab,SuperSpy Jacket,Gear,Upper body,yes,yes
+1154,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/ClassyCoat.prefab,Classy Coat,Gear,Upper body,yes,yes
+1155,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/Godfather.prefab,Godfather's Suit Jacket,Gear,Upper body,yes,yes
+1156,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/LeatherCoat.prefab,Luxury Leather Coat,Gear,Upper body,yes,yes
+1157,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/LeatherShoes.prefab,Leather Dress Shoes,Gear,Boots,yes,yes
+1158,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/LunaticLabjacket.prefab,Doctor Death,Gear,Upper body,yes,yes
+1159,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/MafiaUpperbody.prefab,Mafioso Jacket,Gear,Upper body,yes,yes
+1162,Artwork/Weapons/Melee/Prefabs/Hammer.prefab,UberHammer,Weapon,Melee,yes,yes
+1163,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/UberJacket.prefab,UberJacket,Gear,Upper body,yes,yes
+1164,Artwork/Weapons/HG/GodFather/Prefabs/GoldPistol.prefab,Godfather's Hand Cannon,Weapon,Handgun,yes,yes
+1165,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/BoyHead.prefab,Chibi Boy,Gear,Head,yes,yes
+1166,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/GirlHead.prefab,Chibi Girl,Gear,Head,yes,yes
+1167,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/KnightUpperbodyGolden.prefab,Sir Magnus Cuirass,Gear,Upper body,yes,yes
+1168,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/KnightLowerbodyGolden.prefab,Sir Magnus Greaves,Gear,Lower body,yes,yes
+1169,Artwork/Characters/LutzRavinoff/Gear/Gloves/Prefabs/KnightGlovesGolden.prefab,Sir Magnus Gauntlets,Gear,Gloves,yes,yes
+1170,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/KnightBootsGolden.prefab,Sir Magnus Boots,Gear,Boots,yes,yes
+1171,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/KnightHead_1_Golden.prefab,Sir Magnus Horned Helmet,Gear,Head,yes,yes
+1172,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/KnightHead_2_Golden.prefab,Sir Magnus Thorny Helmet,Gear,Head,yes,yes
+1173,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/KnightHead_3_Golden.prefab,Sir Magnus Crested Helmet,Gear,Head,yes,yes
+1174,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/KnightUpperbodyBlack.prefab,Iron Body of Viktor,Gear,Upper body,yes,yes
+1175,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/KnightLowerbodyBlack.prefab,Iron Legs of Viktor,Gear,Lower body,yes,yes
+1176,Artwork/Characters/LutzRavinoff/Gear/Gloves/Prefabs/KnightGlovesBlack.prefab,Iron Fists of Viktor,Gear,Gloves,yes,yes
+1177,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/KnightBootsBlack.prefab,Iron Heel of Viktor,Gear,Boots,yes,yes
+1178,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/KnightHead_1_Black.prefab,Iron Horns of Viktor,Gear,Head,yes,yes
+1179,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/KnightHead_2_Black.prefab,Iron Helmet of Viktor,Gear,Head,yes,yes
+1180,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/KnightHead_3_Black.prefab,Iron Crest of Viktor,Gear,Head,yes,yes
+1184,Artwork/Weapons/Melee/Prefabs/SantaScythe.prefab,UberSanta Claw,Weapon,Melee,yes,yes
+1185,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/SantaUpperbody.prefab,UberSanta Jacket,Gear,Upper body,yes,yes
+1186,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/SantaLowerbody.prefab,UberSanta Pants,Gear,Lower body,yes,yes
+1187,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/SantaHead.prefab,UberSanta Hat,Gear,Head,yes,yes
+1188,Artwork/Characters/LutzRavinoff/Gear/Gloves/Prefabs/SantaGloves.prefab,UberSanta Gloves,Gear,Gloves,yes,yes
+1189,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/SantaBoots.prefab,UberSanta Boots,Gear,Boots,yes,yes
+1190,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/SantaBeard.prefab,UberBeard,Gear,Face,yes,yes
+1191,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/FlagMask_Australia.prefab,Australia Mask,Gear,Face,yes,yes
+1192,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/FlagMask_Brazil.prefab,Brazil Mask,Gear,Face,yes,yes
+1193,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/FlagMask_Canada.prefab,Canada Mask,Gear,Face,yes,yes
+1194,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/FlagMask_China.prefab,China Mask,Gear,Face,yes,yes
+1195,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/FlagMask_Europe.prefab,Europe Mask,Gear,Face,yes,yes
+1196,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/FlagMask_France.prefab,France Mask,Gear,Face,yes,yes
+1197,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/FlagMask_Germany.prefab,Germany Mask,Gear,Face,yes,yes
+1198,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/FlagMask_Holand.prefab,Holland Mask,Gear,Face,yes,yes
+1199,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/FlagMask_HongKong.prefab,Hong Kong Mask,Gear,Face,yes,yes
+1200,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/FlagMask_India.prefab,India Mask,Gear,Face,yes,yes
+1201,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/FlagMask_Italy.prefab,Italy Mask,Gear,Face,yes,yes
+1202,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/FlagMask_Japan.prefab,Japan Mask,Gear,Face,yes,yes
+1203,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/FlagMask_Latvia.prefab,Latvia Mask,Gear,Face,yes,yes
+1204,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/FlagMask_Malaysia.prefab,Malaysia Mask,Gear,Face,yes,yes
+1205,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/FlagMask_Mexico.prefab,Mexico Mask,Gear,Face,yes,yes
+1206,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/FlagMask_NewZealand.prefab,New Zealand Mask,Gear,Face,yes,yes
+1207,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/FlagMask_Philipines.prefab,Philippines Mask,Gear,Face,yes,yes
+1208,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/FlagMask_Poland.prefab,Poland Mask,Gear,Face,yes,yes
+1209,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/FlagMask_Portugal.prefab,Portugal Mask,Gear,Face,yes,yes
+1210,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/FlagMask_Romania.prefab,Romania Mask,Gear,Face,yes,yes
+1211,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/FlagMask_Russia.prefab,Russia Mask,Gear,Face,yes,yes
+1212,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/FlagMask_Singapore.prefab,Singapore Mask,Gear,Face,yes,yes
+1213,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/FlagMask_Korea.prefab,South Korea Mask,Gear,Face,yes,yes
+1214,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/FlagMask_Spain.prefab,Spain Mask,Gear,Face,yes,yes
+1215,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/FlagMask_Turkey.prefab,Turkey Mask,Gear,Face,yes,yes
+1216,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/FlagMask_UK.prefab,UK Mask,Gear,Face,yes,yes
+1217,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/FlagMask_USA.prefab,USA Mask,Gear,Face,yes,yes
+1218,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/Tron_Boots_Blue.prefab,T500 Blue Boots,Gear,Boots,yes,yes
+1219,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/Tron_Boots_Red.prefab,T500 Red Boots,Gear,Boots,yes,yes
+1220,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/Tron_Boots_Yellow.prefab,T500 Yellow Boots,Gear,Boots,yes,yes
+1221,Artwork/Characters/LutzRavinoff/Gear/Gloves/Prefabs/Tron_Gloves_Blue.prefab,T500 Blue Gloves,Gear,Gloves,yes,yes
+1222,Artwork/Characters/LutzRavinoff/Gear/Gloves/Prefabs/Tron_Gloves_Red.prefab,T500 Red Gloves,Gear,Gloves,yes,yes
+1223,Artwork/Characters/LutzRavinoff/Gear/Gloves/Prefabs/Tron_Gloves_Yellow.prefab,T500 Yellow Gloves,Gear,Gloves,yes,yes
+1224,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/Tron_Head_Blue.prefab,T500 Blue Mask,Gear,Head,yes,yes
+1225,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/Tron_Head_Red.prefab,T500 Red Mask,Gear,Head,yes,yes
+1226,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/Tron_Head_Yellow.prefab,T500 Yellow Mask,Gear,Head,yes,yes
+1227,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/Tron_Lowerbody_Blue.prefab,T500 Blue Legs,Gear,Lower body,yes,yes
+1228,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/Tron_Lowerbody_Red.prefab,T500 Red Legs,Gear,Lower body,yes,yes
+1229,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/Tron_Lowerbody_Yellow.prefab,T500 Yellow Legs,Gear,Lower body,yes,yes
+1230,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/Tron_Upperbody_Blue.prefab,T500 Blue Armor,Gear,Upper body,yes,yes
+1231,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/Tron_Upperbody_Red.prefab,T500 Red Armor,Gear,Upper body,yes,yes
+1232,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/Tron_Upperbody_Yellow.prefab,T500 Yellow Armor,Gear,Upper body,yes,yes
+1233,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/FlagMask_Taiwan.prefab,Taiwan Mask,Gear,Face,yes,yes
+1234,no prefab (scene list entry),Clan License,Functional,FunctionalGeneral,yes,yes
+1237,Artwork/Weapons/HG/SpitefulSkewer/Prefabs/SpitefulSkewer.prefab,Spiteful Stinger,Weapon,Handgun,yes,yes
+1239,Artwork/Weapons/SR/NefariousNeedler/Prefabs/NefariousNeedler.prefab,Nefarious Needler,Weapon,Sniper,yes,yes
+1240,Artwork/Characters/LutzRavinoff/Gear/Holo/JuliaHolo.prefab,Julia Holo,Gear,Holo,yes,yes
+1241,Artwork/Weapons/MG/Sabertooth/Prefabs/Sabertooth.prefab,Sabertooth,Weapon,Machinegun,yes,yes
+1242,Artwork/Weapons/SG/Firewave/Prefabs/Firewave.prefab,Firewave,Weapon,Shotgun,yes,yes
+1243,Artwork/Weapons/CN/ForceCannonPlus/Prefabs/ForceCannonPlus.prefab,Force Cannon Plus,Weapon,Cannon,yes,yes
+1244,Artwork/Weapons/SR/DarkVanquisher/Prefabs/DarkVanquisher.prefab,Dark Vanquisher,Weapon,Sniper,yes,yes
+1245,Artwork/Weapons/SP/ArcticRifle/Prefabs/ArcticRifle.prefab,Arctic Rifle,Weapon,Splattergun,yes,yes
+1246,Artwork/Weapons/SR/FusionLance/Prefabs/FusionLance.prefab,Fusion Lance,Weapon,Sniper,yes,yes
+1247,,Spring Grenades: 3,,,no,yes
+1248,,Spring Grenades: 1,,,no,yes
+1249,,Spring Grenades: 8,,,no,yes
+1254,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/ModeratorTShirt.prefab,Mod Shirt,Gear,Upper body,yes,yes
+1255,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/GlobalModeratorTShirt.prefab,Global Mod Shirt,Gear,Upper body,yes,yes
+1256,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/ArcticDreadsBoots.prefab,ArcticDreads Boots,Gear,Boots,yes,yes
+1257,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/ArcticDreadsFace.prefab,ArcticDreads Mask,Gear,Face,yes,yes
+1258,Artwork/Characters/LutzRavinoff/Gear/Gloves/Prefabs/ArcticDreadsGloves.prefab,ArcticDreads Gloves,Gear,Gloves,yes,yes
+1259,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/ArcticDreadsHead.prefab,ArcticDreads Beanie,Gear,Head,yes,yes
+1260,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/ArcticDreadsLowerbody.prefab,ArcticDreads Tactical Pants,Gear,Lower body,yes,yes
+1261,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/ArcticDreadsUpperbody.prefab,ArcticDreads Tactical Jacket,Gear,Upper body,yes,yes
+1262,Artwork/Weapons/LR/iLauncher/Prefabs/iLauncher.prefab,iLauncher,Weapon,Launcher,yes,yes
+1263,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/GreenTShirt.prefab,Eco Shirt,Gear,Upper body,yes,yes
+1265,no prefab (scene list entry),App License,Functional,FunctionalGeneral,yes,yes
+1272,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/BlackCorpsBoots.prefab,Black Corps Boots,Gear,Boots,yes,yes
+1273,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/BlackCorpsFace.prefab,Black Corps Balaclava,Gear,Face,yes,yes
+1274,Artwork/Characters/LutzRavinoff/Gear/Gloves/Prefabs/BlackCorpsGloves.prefab,Black Corps Gloves,Gear,Gloves,yes,yes
+1275,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/BlackCorpsHead.prefab,Black Corps Helmet,Gear,Head,yes,yes
+1276,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/BlackCorpsLowerbody.prefab,Black Corps Leg Armor,Gear,Lower body,yes,yes
+1277,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/BlackCorpsUpperbody.prefab,Black Corps Body Armor,Gear,Upper body,yes,yes
+1278,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/JuggernautBoots.prefab,Juggernaut Boots,Gear,Boots,yes,yes
+1279,Artwork/Characters/LutzRavinoff/Gear/Gloves/Prefabs/JuggernautGloves.prefab,Juggernaut Powered Grip,Gear,Gloves,yes,yes
+1280,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/JuggernautHead.prefab,Juggernaut Visor,Gear,Head,yes,yes
+1281,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/JuggernautLowerbody.prefab,Juggernaut Leg Armor,Gear,Lower body,yes,yes
+1282,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/JuggernautUpperbody.prefab,Juggernaut Chest Armor,Gear,Upper body,yes,yes
+1283,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/MegatronBoots.prefab,Sentinel Spurs,Gear,Boots,yes,yes
+1285,Artwork/Characters/LutzRavinoff/Gear/Gloves/Prefabs/MegatronGloves.prefab,Sentinel Gloves,Gear,Gloves,yes,yes
+1286,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/MegatronHead.prefab,Sentinel Cowl,Gear,Head,yes,yes
+1287,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/MegatronLowerbody.prefab,Sentinel Power Greaves,Gear,Lower body,yes,yes
+1288,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/MegatronUpperbody.prefab,Sentinel Power Armor,Gear,Upper body,yes,yes
+1289,Artwork/Characters/LutzRavinoff/Gear/Holo/CyborgZombieHolo.prefab,Cyber Zombie Lutz,Gear,Holo,yes,yes
+1290,Artwork/Characters/LutzRavinoff/Gear/Holo/HumanZombieHolo.prefab,Zombie Lutz,Gear,Holo,yes,yes
+1291,Artwork/Weapons/SG/DeathHammer/DeathHammer.prefab,Death Hammer,Weapon,Shotgun,yes,yes
+1292,Artwork/Weapons/SG/OblivionHammer/OblivionHammer.prefab,Oblivion Hammer,Weapon,Shotgun,yes,yes
+1293,Artwork/Weapons/Melee/Prefabs/ZombieAxe.prefab,The Sender,Weapon,Melee,yes,yes
+1294,no prefab (scene list entry),Name Change,Functional,FunctionalGeneral,yes,yes
+1297,Artwork/Weapons/LR/Demolisher/Prefabs/Demolisher.prefab,Demolisher,Weapon,Launcher,yes,yes
+1298,Artwork/Weapons/SR/Vlad/Prefabs/Vlad.prefab,Vlad,Weapon,Sniper,yes,yes
+1299,Artwork/Weapons/CN/UltimaCannon/Prefabs/UltimaCannon.prefab,Ultima Cannon,Weapon,Cannon,yes,yes
+1300,Artwork/Weapons/SR/SnapShot/Prefabs/Snapshot.prefab,Snap Shot,Weapon,Sniper,yes,yes
+1301,Artwork/Weapons/SR/Vanquisher_NewYearEdition/Vanquisher_NewYearEdition.prefab,Vanquisher Dragon Edition,Weapon,Sniper,yes,yes
+1302,Artwork/Weapons/SP/MagmaRifle_NewYearEdition/MagmaRifle_NewYearEdition.prefab,Magma Rifle Dragon Edition,Weapon,Splattergun,yes,yes
+1303,Artwork/Weapons/MG/UMG_NewYearEdition/UMG_NewYearEdition.prefab,UMG Dragon Edition,Weapon,Machinegun,yes,yes
+1304,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/JuggernautUpperbodyDE.prefab,Juggernaut Chest Dragon Edition,Gear,Upper body,yes,yes
+1305,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/JuggernautLowerbodyDE.prefab,Juggernaut Legs Dragon Edition,Gear,Lower body,yes,yes
+1307,Artwork/Characters/LutzRavinoff/Gear/Gloves/Prefabs/JuggernautGlovesDE.prefab,Juggernaut's Grip Dragon Edition,Gear,Gloves,yes,yes
+1308,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/JuggernautBootsDE.prefab,Juggernaut Boots Dragon Edition,Gear,Boots,yes,yes
+1309,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/JuggernautHeadDE.prefab,Juggernaut Visor Dragon Edition,Gear,Head,yes,yes
+1310,Artwork/Characters/LutzRavinoff/Gear/Holo/JuliaNinjaHolo.prefab,Julia Ninja holo,Gear,Holo,yes,yes
+1311,Artwork/Weapons/CN/EnigmaCannon_Valentine2012/EnigmaCannon_Valentine.prefab,The Love Gun,Weapon,Cannon,yes,yes
+1312,Artwork/Weapons/Melee/Prefabs/MythicEdge-DE.prefab,Mythic Edge Dragon Edition,Weapon,Melee,yes,yes
+1313,Artwork/Weapons/MG/BattleSnake/Prefabs/BattleSnake-DE.prefab,Battlesnake Dragon Edition,Weapon,Machinegun,yes,yes
+1314,Artwork/Weapons/SG/Thunderbuss/Prefabs/Thunderbuss-DE.prefab,Thunderbuss Dragon Edition,Weapon,Shotgun,yes,yes
+1315,Artwork/Weapons/CN/EnigmaCannon-DragonEdition/EnigmaCannon-DE.prefab,Enigma Cannon Dragon Edition,Weapon,Cannon,yes,yes
+1316,Artwork/Weapons/SR/ParticleLance-DragonEdition/ParticleLance-DE.prefab,Particle Lance Dragon Edition,Weapon,Sniper,yes,yes
+1319,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/NinjaUpperBodyBlack-DE.prefab,Ninja Armor Black Dragon Edition,Gear,Upper body,yes,yes
+1320,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/NinjaLowerBodyBlack-DE.prefab,Ninja Greaves Black Dragon Edition ,Gear,Lower body,yes,yes
+1321,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/NinjaHeadBlack-DE.prefab,Ninja Headband Black Dragon Edition,Gear,Head,yes,yes
+1322,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/NinjaFaceBlack-DE.prefab,Ninja Maw Black Dragon Edition,Gear,Face,yes,yes
+1323,Artwork/Characters/LutzRavinoff/Gear/Gloves/Prefabs/NinjaGlovesBlack-DE.prefab,Ninja Claws Black Dragon Edition,Gear,Gloves,yes,yes
+1324,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/NinjaBootsBlack-DE.prefab,Ninja Tabi Black Dragon Edition,Gear,Boots,yes,yes
+1325,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/NinjaUpperBodyWhite-DE.prefab,Ninja Armor White Dragon Edition,Gear,Upper body,yes,yes
+1326,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/NinjaLowerBodyWhite-DE.prefab,Ninja Greaves White Dragon Edition ,Gear,Lower body,yes,yes
+1327,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/NinjaHeadWhite-DE.prefab,Ninja Headband White Dragon Edition,Gear,Head,yes,yes
+1328,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/NinjaFaceWhite-DE.prefab,Ninja Maw White Dragon Edition,Gear,Face,yes,yes
+1329,Artwork/Characters/LutzRavinoff/Gear/Gloves/Prefabs/NinjaGlovesWhite-DE.prefab,Ninja Claws White Dragon Edition,Gear,Gloves,yes,yes
+1330,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/NinjaBootsWhite-DE.prefab,Ninja Tabi White Dragon Edition,Gear,Boots,yes,yes
+1331,Artwork/Weapons/SR/Vanquisher_Kongregate/Vanquisher_Kongregate.prefab,Vanquisher Kongregate Edition,Weapon,Sniper,yes,yes
+1332,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/KongregateUpperbody.prefab,Kongregate Power Armor,Gear,Upper body,yes,yes
+1333,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/KongregateLowerbody.prefab,Kongregate Power Greaves,Gear,Lower body,yes,yes
+1334,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/KongregateHead.prefab,Kongregate Cowl,Gear,Head,yes,yes
+1335,Artwork/Characters/LutzRavinoff/Gear/Gloves/Prefabs/KongregateGloves.prefab,Kongregate Gloves,Gear,Gloves,yes,yes
+1336,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/KongregateBoots.prefab,Kongregate Spurs,Gear,Boots,yes,yes
+1337,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/KongregateJacketBasic.prefab,Kongregate Jacket Basic,Gear,Upper body,yes,yes
+1338,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/KongregateJacketAdvanced.prefab,Kongregate Jacket Advanced,Gear,Upper body,yes,yes
+1339,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/Vampire_Hair.prefab,Coiffure of Lucius the Cruel,Gear,Head,yes,yes
+1340,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/Vampire_Face.prefab,Fangs of Lucius  the Cruel,Gear,Face,yes,yes
+1341,Artwork/Characters/LutzRavinoff/Gear/Gloves/Prefabs/Vampire_Gloves.prefab,Gloves of Lucius the Cruel,Gear,Gloves,yes,yes
+1342,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/Vampire_UB.prefab,Mantle of Lucius the Cruel,Gear,Upper body,yes,yes
+1343,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/Vampire_LB.prefab,Drawers of Lucius the Cruel,Gear,Lower body,yes,yes
+1344,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/Vampire_Boots.prefab,Boots of Lucius the Cruel,Gear,Boots,yes,yes
+1345,,INSTANT HEAL,,,no,yes
+1346,,HEAL OVER TIME,,,no,yes
+1347,,HEAL AFTER FOCUS,,,no,yes
+1349,,Cannon Ammo Buff,,,no,yes
+1350,,Armor Buff,,,no,yes
+1351,,Default Grenade,,,no,yes
+1355,Artwork/Weapons/SR/AWP/Prefabs/AWP_Roughed.prefab,AWP Normal,Weapon,Sniper,yes,yes
+1356,Artwork/Weapons/SR/AWP/Prefabs/AWP_Black.prefab,AWP Black,Weapon,Sniper,yes,yes
+1357,Artwork/Weapons/SR/AWP/Prefabs/AWP_Camo.prefab,Awp Camouflage,Weapon,Sniper,yes,yes
+1358,Artwork/Weapons/SR/AWP/Prefabs/AWP_Pimp.prefab,"AWP \""Tiger Stripes\""",Weapon,Sniper,yes,yes
+1359,Artwork/Weapons/MG/UZI/Prefabs/UZI_Base.prefab,"UZI \""Normal\""",Weapon,Machinegun,yes,yes
+1360,Artwork/Weapons/MG/UZI/Prefabs/UZI_Camo.prefab,"UZI \""Camouflage\""",Weapon,Machinegun,yes,yes
+1361,Artwork/Weapons/MG/UZI/Prefabs/UZI_Pimp.prefab,"UZI \""Tiger Stripes\""",Weapon,Machinegun,yes,yes
+1362,Artwork/Weapons/MG/UZI/Prefabs/UZI_Gold.prefab,"UZI \""Gold\""",Weapon,Machinegun,yes,yes
+1363,Artwork/Weapons/HG/USP/Prefabs/USP_BaseNoSilencer.prefab,"USP \""Normal\""",Weapon,Handgun,yes,yes
+1364,Artwork/Weapons/HG/USP/Prefabs/USP_CamoNoSilencer.prefab,"USP \""Camouflage\""",Weapon,Handgun,yes,yes
+1365,Artwork/Weapons/HG/USP/Prefabs/USP_BlackNoSilencer.prefab,"USP \""Black\""",Weapon,Handgun,yes,yes
+1366,Artwork/Weapons/HG/USP/Prefabs/USP_PimpNoSilencer.prefab,"USP \""Tiger Stripes\""",Weapon,Handgun,yes,yes
+1367,Artwork/Weapons/HG/USP/Prefabs/USP_Base.prefab,"USP Silenced \""Normal\""",Weapon,Handgun,yes,yes
+1368,Artwork/Weapons/HG/USP/Prefabs/USP_Camo.prefab,"USP Silenced \""Camouflage\""",Weapon,Handgun,yes,yes
+1369,Artwork/Weapons/HG/USP/Prefabs/USP_Black.prefab,"USP Silenced \""Black\""",Weapon,Handgun,yes,yes
+1370,Artwork/Weapons/MG/AssaultRifle/Prefabs/AssaultRifle_Brown.prefab,"Assault Rifle \""Normal\""",Weapon,Machinegun,yes,yes
+1371,Artwork/Weapons/MG/AssaultRifle/Prefabs/AssaultRifle_Camo.prefab,"Assault Rifle \""Camouflage\""",Weapon,Machinegun,yes,yes
+1372,Artwork/Weapons/MG/AssaultRifle/Prefabs/AssaultRifle_Pimp.prefab,"Assault Rifle \""Tiger Stripes\""",Weapon,Machinegun,yes,yes
+1373,Artwork/Weapons/MG/AssaultRifle/Prefabs/AssaultRifle_Blue.prefab,"Assault Rifle \""Black\""",Weapon,Machinegun,yes,yes
+1374,Artwork/Weapons/SG/AutomaticShotGun/Prefabs/Automatic_Shotgun_Roughed.prefab,SPAS-12,Weapon,Shotgun,yes,yes
+1375,Artwork/Weapons/SG/AutomaticShotGun/Prefabs/Automatic_Shotgun_Camo.prefab,"Automatic Shotgun \""Camouflage\""",Weapon,Shotgun,yes,yes
+1376,Artwork/Weapons/SG/AutomaticShotGun/Prefabs/Automatic_Shotgun_Pimp.prefab,"Automatic Shotgun \""Tiger Stripes\""",Weapon,Shotgun,yes,yes
+1377,Artwork/Weapons/SG/AutomaticShotGun/Prefabs/Automatic_Shotgun_Black.prefab,"Automatic Shotgun \""Black\""",Weapon,Shotgun,yes,yes
+1382,Artwork/Weapons/HG/USP/Prefabs/USP_Pimp.prefab,"USP Silenced \""Tiger Stripes\""",Weapon,Handgun,yes,yes
+1383,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/CounterTerrorist_Hat.prefab,CT Helmet,Gear,Head,yes,yes
+1385,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/CounterTerrorist_Face.prefab,CT Face,Gear,Face,yes,yes
+1387,Artwork/Characters/LutzRavinoff/Gear/Gloves/Prefabs/CounterTerrorist_Gloves.prefab,CT Gloves,Gear,Gloves,yes,yes
+1388,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/CounterTerrorist_Boots.prefab,CT Boots,Gear,Boots,yes,yes
+1389,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/CounterTerrorist_UB_Germany.prefab,CT Top Germany,Gear,Upper body,yes,yes
+1390,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/CounterTerrorist_UB_France.prefab,CT Top France,Gear,Upper body,yes,yes
+1392,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/CounterTerrorist_UB_England.prefab,CT Top Uk,Gear,Upper body,yes,yes
+1393,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/CounterTerrorist_UB_Usa.prefab,CT Top Usa,Gear,Upper body,yes,yes
+1394,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/CounterTerrorist_UB_Russia.prefab,CT Top Russia,Gear,Upper body,yes,yes
+1395,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/CounterTerrorist_LB.prefab,CT Bottom,Gear,Lower body,yes,yes
+1396,Artwork/Characters/LutzRavinoff/Gear/Face/Prefabs/Terrorist_Face.prefab,Terrorist Balaclava,Gear,Face,yes,yes
+1397,Artwork/Characters/LutzRavinoff/Gear/Gloves/Prefabs/Terrorist_Gloves.prefab,Terrorist Gloves,Gear,Gloves,yes,yes
+1398,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/Terrorist_Boots.prefab,Terrorist Boots,Gear,Boots,yes,yes
+1399,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/Terrorist_UB_Default.prefab,Terrorist Vest,Gear,Upper body,yes,yes
+1400,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/Terrorist_LB_Default.prefab,Terrorist Pants Urban,Gear,Lower body,yes,yes
+1401,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/Terrorist_LB_Camo01.prefab,Terrorist Pants Jungle,Gear,Lower body,yes,yes
+1402,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/Terrorist_LB_Camo02.prefab,Terrorist Pants Artic,Gear,Lower body,yes,yes
+1403,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/Terrorist_LB_Camo03.prefab,Terrorist Pants Uni,Gear,Lower body,yes,yes
+1416,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/Terrorist_LB_Camo04.prefab,Terrorist Pants Tiger,Gear,Lower body,yes,yes
+1428,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/Halo_Boots.prefab,,Gear,Boots,yes,no
+1429,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/Halo_Head.prefab,,Gear,Head,yes,no
+1430,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/Halo_UB.prefab,,Gear,Upper body,yes,no
+1431,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/Halo_LB.prefab,,Gear,Lower body,yes,no
+1432,Artwork/Characters/LutzRavinoff/Gear/Gloves/Prefabs/Halo_Gloves.prefab,,Gear,Gloves,yes,no
+1434,Artwork/Characters/LutzRavinoff/Gear/Gloves/Prefabs/Halo_M_Gloves.prefab,,Gear,Gloves,yes,no
+1435,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/Halo_M_LB.prefab,,Gear,Lower body,yes,no
+1437,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/Halo_M_UB.prefab,,Gear,Upper body,yes,no
+1438,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/Halo_M_Head.prefab,,Gear,Head,yes,no
+1439,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/Halo_M_Boots.prefab,,Gear,Boots,yes,no
+1440,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/QAShirt.prefab,,Gear,Upper body,yes,no
+1442,Artwork/Characters/LutzRavinoff/Gear/Gloves/Prefabs/CamoHalo_M_Gloves.prefab,,Gear,Gloves,yes,no
+1443,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/CamoHalo_M_Boots.prefab,,Gear,Boots,yes,no
+1444,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/CamoHalo_M_Head.prefab,,Gear,Head,yes,no
+1446,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/CamoHalo_M_LB.prefab,,Gear,Lower body,yes,no
+1447,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/CamoHalo_M_UB.prefab,,Gear,Upper body,yes,no
+1448,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/CamoHalo_L_Boots.prefab,,Gear,Boots,yes,no
+1449,Artwork/Characters/LutzRavinoff/Gear/Gloves/Prefabs/CamoHalo_L_Gloves.prefab,,Gear,Gloves,yes,no
+1450,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/CamoHalo_L_Head.prefab,,Gear,Head,yes,no
+1451,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/CamoHalo_L_UB.prefab,,Gear,Upper body,yes,no
+1452,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/CamoHalo_L_LB.prefab,,Gear,Lower body,yes,no
+1453,Artwork/Weapons/MG/AK47/AK47.prefab,,Weapon,Machinegun,yes,no
+1454,Artwork/Weapons/LR/HaloCannon/HaloCannon.prefab,,Weapon,Launcher,yes,no
+1455,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/Skull_Yellow.prefab,,Gear,Head,yes,no
+1456,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/Skull_Gold.prefab,,Gear,Head,yes,no
+1457,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/Skull_RedStar.prefab,,Gear,Head,yes,no
+1458,Artwork/Characters/LutzRavinoff/Gear/Gloves/Prefabs/Veteran_Halo_L_Gloves.prefab,,Gear,Gloves,yes,no
+1459,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/Veteran_Halo_L_Boots.prefab,,Gear,Boots,yes,no
+1460,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/Veteran_Halo_L_Head.prefab,,Gear,Head,yes,no
+1461,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/Veteran_Halo_L_UB.prefab,,Gear,Upper body,yes,no
+1462,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/Veteran_Halo_L_LB.prefab,,Gear,Lower body,yes,no
+1463,Artwork/Characters/LutzRavinoff/Gear/Gloves/Prefabs/Veteran_Halo_M_Gloves.prefab,,Gear,Gloves,yes,no
+1464,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/Veteran_Halo_M_Boots.prefab,,Gear,Boots,yes,no
+1465,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/Veteran_Halo_M_Head.prefab,,Gear,Head,yes,no
+1466,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/Veteran_Halo_M_UB.prefab,,Gear,Upper body,yes,no
+1467,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/Veteran_Halo_M_LB.prefab,,Gear,Lower body,yes,no
+1478,Artwork/Weapons/MG/AK47/AK47_Black.prefab,,Weapon,Machinegun,yes,no
+1479,Artwork/Weapons/MG/AK47/AK47_Camo.prefab,,Weapon,Machinegun,yes,no
+1480,Artwork/Weapons/MG/AK47/AK47_Tiger.prefab,,Weapon,Machinegun,yes,no
+1483,Artwork/Weapons/LR/HaloCannon/HaloCannon_Camo.prefab,,Weapon,Launcher,yes,no
+1484,Artwork/Weapons/LR/HaloCannon/HaloCannon_Veteran.prefab,,Weapon,Launcher,yes,no
+1485,Artwork/Weapons/MG/M4/M4_Standard.prefab,,Weapon,Machinegun,yes,no
+1486,Artwork/Weapons/MG/M4/M4_Black.prefab,,Weapon,Machinegun,yes,no
+1487,Artwork/Weapons/MG/M4/M4_Camo.prefab,,Weapon,Machinegun,yes,no
+1488,Artwork/Weapons/MG/M4/M4_Tiger.prefab,,Weapon,Machinegun,yes,no
+1489,Artwork/Weapons/MG/UZI/Prefabs/UZI_Tiger.prefab,,Weapon,Machinegun,yes,no
+1490,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/Halo_Heavy_Boots_Veteran.prefab,,Gear,Boots,yes,no
+1491,Artwork/Characters/LutzRavinoff/Gear/Gloves/Prefabs/Halo_Heavy_Gloves_Veteran.prefab,,Gear,Gloves,yes,no
+1492,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/Halo_Heavy_Head_Veteran.prefab,,Gear,Head,yes,no
+1493,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/Halo_Heavy_LB_Veteran.prefab,,Gear,Lower body,yes,no
+1494,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/Halo_Heavy_UB_Veteran.prefab,,Gear,Upper body,yes,no
+1495,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/Halo_Heavy_UB_Camo.prefab,,Gear,Upper body,yes,no
+1496,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/Halo_Heavy_LB_Camo.prefab,,Gear,Lower body,yes,no
+1497,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/Halo_Heavy_Head_Camo.prefab,,Gear,Head,yes,no
+1498,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/Halo_Heavy_Boots_Camo.prefab,,Gear,Boots,yes,no
+1499,Artwork/Characters/LutzRavinoff/Gear/Gloves/Prefabs/Halo_Heavy_Gloves_Camo.prefab,,Gear,Gloves,yes,no
+1500,Artwork/Characters/LutzRavinoff/Gear/UpperBody/Prefabs/Halo_Heavy_UB.prefab,,Gear,Upper body,yes,no
+1501,Artwork/Characters/LutzRavinoff/Gear/LowerBody/Prefabs/Halo_Heavy_LB.prefab,,Gear,Lower body,yes,no
+1502,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/Halo_Heavy_Head.prefab,,Gear,Head,yes,no
+1503,Artwork/Characters/LutzRavinoff/Gear/Boots/Prefabs/Halo_Heavy_Boots.prefab,,Gear,Boots,yes,no
+1504,Artwork/Characters/LutzRavinoff/Gear/Gloves/Prefabs/Halo_Heavy_Gloves.prefab,,Gear,Gloves,yes,no
+1506,Artwork/Weapons/MG/M4/M4_Camo_S.prefab,,Weapon,Machinegun,yes,no
+1507,Artwork/Weapons/MG/M4/M4_Standard_S.prefab,,Weapon,Machinegun,yes,no
+1508,Artwork/Weapons/MG/M4/M4_Black_S.prefab,,Weapon,Machinegun,yes,no
+1509,Artwork/Weapons/MG/M4/M4_Tiger_S.prefab,,Weapon,Machinegun,yes,no
+1510,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/Skull_YellowTooth.prefab,,Gear,Head,yes,no
+1511,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/Skull_Comic_Smile.prefab,,Gear,Head,yes,no
+1512,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/Skull_Comic_Splat.prefab,,Gear,Head,yes,no
+1513,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/Skull_US.prefab,,Gear,Head,yes,no
+1514,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/Skull_Military_Blue.prefab,,Gear,Head,yes,no
+1515,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/Skull_Military_Green.prefab,,Gear,Head,yes,no
+1516,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/Skull_Military_Yellow.prefab,,Gear,Head,yes,no
+1517,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/Skull_Simple_Blue.prefab,,Gear,Head,yes,no
+1518,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/Skull_Simple_Green.prefab,,Gear,Head,yes,no
+1519,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/Skull_Simple_Red.prefab,,Gear,Head,yes,no
+1520,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/Skull_Blood.prefab,,Gear,Head,yes,no
+1521,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/Skull_BlueTooth.prefab,,Gear,Head,yes,no
+1522,Artwork/Characters/LutzRavinoff/Gear/Head/Prefabs/Skull_Camouflage.prefab,,Gear,Head,yes,no
